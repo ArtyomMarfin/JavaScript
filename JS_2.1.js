@@ -23,10 +23,22 @@
 // :):):):)
 // :):):):):)
 
-
+// let smile = ':)'
+// for (let i = 1; i < 6; i++) {
+//   console.log (smile.repeat(i))
+// }
 
 // 2*. Преобразовать 2 задачу в функцию, принимающую на вход строку, которая и будет выводиться в консоль (как в условии смайлик), а также количество строк для вывода 
 // e.g. function printSmile(stroka, numberOfRows)
+
+let smile = ':)'
+
+function sm (str, numberOfRows) {
+  for (let i = 1; i <= numberOfRows; i++)
+  console.log (smile.repeat(i))
+}
+
+sm (':)', 10)
 
 // 3**.  Написать функцию, которая принимает на вход слово. Задача функции посчитать и вывести в консоль, сколько в слове гласных, и сколько согласных букв.
 // e.g. function getWordStructure(word)
