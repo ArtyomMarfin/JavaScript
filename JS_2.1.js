@@ -31,12 +31,12 @@
 // 2*. Преобразовать 2 задачу в функцию, принимающую на вход строку, которая и будет выводиться в консоль (как в условии смайлик), а также количество строк для вывода 
 // e.g. function printSmile(stroka, numberOfRows)
 
-// function sm (str, numberOfRows) {
+// function printSmile (stroka, numberOfRows) {
 //   for (let i = 1; i <= numberOfRows; i++)
-//   console.log (str.repeat(i))
+//   console.log (stroka.repeat(i))
 // }
 
-// sm (':)', 10)
+// printSmile (':)', 10)
 
 // 3**.  Написать функцию, которая принимает на вход слово. Задача функции посчитать и вывести в консоль, сколько в слове гласных, и сколько согласных букв.
 // e.g. function getWordStructure(word)
@@ -44,6 +44,22 @@
 // Слово (word) состоит из  (число) гласных и (число) согласных букв
 
 // Проверки: 'case', 'Case', 'Check-list'
+
+function getWordStructure(word) {
+  const vowels = 'aeiouy'.split('');
+  const consonants = 'bcdfghjklmnpqrstvwxz'.split('');
+
+let vowelsCount = 0;
+let consonantsCount = 0;
+
+for (const char of word.toLowerCase()) {
+   if(vowels.includes(char)) vowelsCount++
+    else if (consonants.includes(char)) consonantsCount++
+}
+console.log (`В слове ${word} : ${vowelsCount} гласных и ${consonantsCount} согласных букв`)
+}
+
+getWordStructure("Check-list")
 
 // 4**. Написать функцию, которая проверяет, является ли слово палиндромом
 // e.g. function isPalindrom(word)
